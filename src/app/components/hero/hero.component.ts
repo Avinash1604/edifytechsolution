@@ -57,8 +57,15 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   submitForm() {
     if (this.formData.name && this.formData.phone && this.formData.email && this.formData.message) {
-      console.log('Form submitted:', this.formData);
-      alert('Thank you for contacting us! We will get back to you soon.');
+      const email = 'info@edifytechsolutions.com';
+      const subject = 'New Contact Form Submission';
+      const body = `
+        Name: ${this.formData.name}
+        Phone: ${this.formData.phone}
+        Email: ${this.formData.email}
+        Message: ${this.formData.message}
+      `;
+      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       this.closeModal();
     } else {
       alert('Please fill in all fields');

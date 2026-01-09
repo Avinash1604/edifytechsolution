@@ -1,0 +1,96 @@
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Expert Digital Solutions to <span class="gradient-text">Transform Your Business</span>
+      </h1>
+      <p class="hero-subtitle">
+      Edify Tech Solutions is a technology-focused IT services and consulting company with 15 years of industry presence. The company is led by four founders, all with engineering backgrounds and over 15 years of individual experience in the IT industry. This leadership model ensures strong technical governance, delivery excellence, and long-term client value. 
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" (click)="openModal()">Get Started Today</button>
+        <button class="btn btn-secondary">Learn More</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>100+</h3>
+          <p>Projects Delivered</p>
+        </div>
+        <div class="stat">
+          <h3>15+</h3>
+          <p>Years Experience</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="placeholder-image">
+        <img
+          src="edify-overview.png"
+          alt="Hero Image Placeholder"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Modal -->
+<div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>Get in Touch with Us</h2>
+      <button class="close-btn" (click)="closeModal()">×</button>
+    </div>
+
+    <form (ngSubmit)="submitForm()" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="formData.name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          [(ngModel)]="formData.phone"
+          name="phone"
+          placeholder="Your Phone Number"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="formData.email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          [(ngModel)]="formData.message"
+          name="message"
+          placeholder="Tell us about your project..."
+          rows="4"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>

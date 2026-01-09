@@ -1,0 +1,51 @@
+<footer id="contact" class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>EdifyTechSolutions</h3>
+        <p>
+          Delivering expert digital solutions to help businesses thrive in the modern digital
+          landscape.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li *ngFor="let link of companyLinks">
+            <a [href]="link.href">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li *ngFor="let link of servicesLinks">
+            <a [href]="link.href">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Get in Touch</h4>
+        <p>
+          <strong>Email:</strong><br />
+          <a href="mailto:info@edifytech.com">info@edifytech.com</a>
+        </p>
+        <p>
+          <strong>Phone:</strong><br />
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} EdifyTechSolutions. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>

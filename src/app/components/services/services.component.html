@@ -1,0 +1,22 @@
+<section id="services" class="services">
+  <div class="services-container">
+    <div class="section-header">
+      <h2>Expert Digital Services to Grow your Brand</h2>
+      <p>
+        From strategy to execution, we offer a full range of digital marketing and web
+        development services tailored to help your brand thrive online.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div *ngFor="let service of services" class="service-card">
+        <div class="service-icon">
+          <img [src]="service.icon" [alt]="service.title" />
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <a href="#" class="service-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>

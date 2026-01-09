@@ -1,0 +1,27 @@
+<section class="testimonials">
+  <div class="testimonials-container">
+    <div class="section-header">
+      <h2>Our Clients</h2>
+      <p>
+        Our success lies in the results we deliver. We've helped brands grow through smart digital
+        strategies. Explore how we turn ideas into impact.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+        <div class="testimonial-header">
+          <img [src]="testimonial.image" [alt]="testimonial.name" class="client-image" />
+          <div class="client-info">
+            <h3>{{ testimonial.name }}</h3>
+            <p>{{ testimonial.company }}</p>
+          </div>
+        </div>
+        <div class="stars">
+          <span *ngFor="let i of getStars(testimonial.rating)" class="star">★</span>
+        </div>
+        <p class="testimonial-message">{{ testimonial.message }}</p>
+      </div>
+    </div>
+  </div>
+</section>

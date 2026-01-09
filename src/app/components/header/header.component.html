@@ -1,0 +1,15 @@
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <h1>EdifyTechSolutions</h1>
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li *ngFor="let item of navItems" class="nav-item">
+          <a (click)="scrollToSection(item.href)" [href]="item.href" class="nav-link">{{ item.label }}</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="cta-button" (click)="openContactModal()">Get Started</button>
+  </div>
+</header>

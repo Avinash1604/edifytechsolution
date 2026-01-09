@@ -19,25 +19,25 @@ export class ProcessComponent {
       title: 'Ideate',
       description:
         'We collaborate closely with stakeholders to understand business objectives, challenges, and user needs. Our team defines clear requirements and a strategic roadmap aligned to measurable outcomes.',
-      icon: '/ideate.png'
+      icon: 'ideate.png'
     },
     {
       title: 'Develop',
       description:
         'Our engineering teams build robust, secure, and scalable solutions using modern technologies and best practices. Quality, performance, and maintainability are embedded throughout the development lifecycle.',
-      icon: '/develop.png'
+      icon: 'develop.png'
     },
     {
       title: 'Design',
       description:
         'We translate ideas into intuitive, scalable, and user-centric designs. Our approach focuses on usability, performance, and architectural soundness to ensure long-term value.',
-      icon: '/website-design.png'
+      icon: 'website-design.png'
     },
     {
       title: 'Results',
       description:
         'We deliver reliable solutions that drive tangible business impact. Post-delivery, we support optimization, scalability, and continuous improvement to ensure sustained success.',
-      icon: '/our-process.png'
+      icon: 'our-process.png'
     }
   ];
 }

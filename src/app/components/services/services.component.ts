@@ -18,22 +18,22 @@ export class ServicesComponent {
     {
       title: 'Website Design',
       description: 'Build modern, user-first websites that reflect your brand and drive results.',
-      icon: '/Website Design.png'
+      icon: '/website-design.png'
     },
     {
       title: 'E-Commerce Solutions',
       description: 'Launch mobile-ready online stores for seamless shopping and better sales.',
-      icon: '/E-commerce website.png'
+      icon: '/ecommerce-website.png'
     },
     {
       title: 'SEO Services',
       description: 'Boost visibility and traffic with targeted, up-to-date SEO strategies.',
-      icon: '/SEO Services.png'
+      icon: '/seo-services.png'
     },
     {
       title: 'Mobile App Development',
       description: 'Create powerful mobile applications that engage users and drive growth.',
-      icon: '/Mobile App Develpoment.png'
+      icon: '/mobile-app-development.png'
     }
   ];
 }

@@ -6,19 +6,32 @@
     </div>
 
     <div class="works-grid">
-      <div *ngFor="let work of works" class="work-card">
-        <div class="work-image">
-          <img [src]="work.image" [alt]="work.title" />
-          <div class="work-overlay">
-            <a [href]="work.link" class="view-project">View Project →</a>
-          </div>
-        </div>
+      <div *ngFor="let category of workCategories" class="work-card">
         <div class="work-content">
-          <span class="work-category">{{ work.category }}</span>
-          <h3>{{ work.title }}</h3>
-          <p>{{ work.description }}</p>
+          <h3>{{ category.title }}</h3>
+          <button (click)="openModal(category)" class="view-project">View Projects</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div *ngIf="isModalOpen" class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="closeModal()">×</button>
+    <h2 *ngIf="selectedCategory">{{ selectedCategory.title }}</h2>
+    <div class="project-list">
+      <div *ngFor="let project of selectedCategory?.projects" class="project-item">
+        <h4>{{ project.title }}</h4>
+        <p><strong>Client:</strong> {{ project.client }}</p>
+        <p>{{ project.description }}</p>
+        <div class="project-links">
+          <a *ngIf="project.iTunesUrl" [href]="project.iTunesUrl" target="_blank">iTunes Store</a>
+          <a *ngIf="project.googlePlayUrl" [href]="project.googlePlayUrl" target="_blank">Google Play</a>
+          <a *ngIf="project.websiteUrl" [href]="project.websiteUrl" target="_blank">Website</a>
+          <span *ngIf="project.status">{{ project.status }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

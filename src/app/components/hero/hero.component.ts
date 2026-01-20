@@ -57,7 +57,7 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   submitForm() {
     if (this.formData.name && this.formData.phone && this.formData.email && this.formData.message) {
-      const email = 'info@edifytechsolutions.com';
+      const email = 'edifytechsolutions@gmail.com';
       const subject = 'New Contact Form Submission';
       const body = `
         Name: ${this.formData.name}

@@ -7,7 +7,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem;
     align-items: center;
     padding: 0 4rem;
 
@@ -45,7 +45,7 @@
       font-size: 1rem;
       color: #666;
       line-height: 1.8;
-      margin: 0 0 2rem 0;
+      margin: 0 0 1rem 0;
     }
 
     .team-stats {
@@ -111,6 +111,72 @@
       max-width: 500px;
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .member-card {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 15px;
+    border-left: 5px solid #7c3aed;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border-left-color: #ff0055;
+    }
+
+    .member-header {
+      margin-bottom: 1rem;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0 0 0.5rem 0;
+        background: linear-gradient(135deg, #ff0055, #7c3aed);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .member-role {
+        font-size: 0.95rem;
+        color: #7c3aed;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    .member-bio {
+      p {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.8;
+        margin: 0.75rem 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

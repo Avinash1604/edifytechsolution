@@ -8,7 +8,18 @@
         measurable results, our goal is to help businesses unlock their true potential in the
         digital space.
       </p>
-      <button class="btn btn-primary">Learn More About Us</button>
+    </div>
+
+    <div class="team-members">
+      <div *ngFor="let member of teamMembers" class="member-card">
+        <div class="member-header">
+          <h3>{{ member.name }}</h3>
+          <p class="member-role">{{ member.role }}</p>
+        </div>
+        <div class="member-bio">
+          <p *ngFor="let paragraph of member.bio.split('\n\n')">{{ paragraph }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

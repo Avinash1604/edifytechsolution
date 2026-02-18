@@ -1,6 +1,7 @@
 <section id="services" class="services">
   <div class="services-container">
-    <div class="section-header">
+    <!-- Header - Only show when not viewing details -->
+    <div class="section-header" *ngIf="!selectedService">
       <h2>Expert Digital Services to Grow your Brand</h2>
       <p>
         From strategy to execution, we offer a full range of digital marketing and web
@@ -8,7 +9,8 @@
       </p>
     </div>
 
-    <div class="services-grid">
+    <!-- Services Grid - Show when not viewing details -->
+    <div class="services-grid" *ngIf="!selectedService">
       <div
         *ngFor="let service of services"
         class="service-card"
@@ -22,12 +24,10 @@
         <div class="service-link" *ngIf="service.fullDescription">Learn More →</div>
       </div>
     </div>
-  </div>
 
-  <!-- Service Detail Modal -->
-  <div *ngIf="selectedService" class="service-detail-modal" (click)="closeDetail()">
-    <div class="service-detail-content" (click)="$event.stopPropagation()">
-      <button class="close-btn" (click)="closeDetail()">✕</button>
+    <!-- Service Detail Inline View -->
+    <div *ngIf="selectedService" class="service-detail-inline">
+      <button class="back-btn" (click)="closeDetail()">← Back to Services</button>
 
       <div class="detail-header">
         <div class="detail-icon">
@@ -55,6 +55,10 @@
             <li *ngFor="let model of selectedService.models">{{ model }}</li>
           </ul>
         </div>
+      </div>
+
+      <div class="detail-footer">
+        <button class="back-btn" (click)="closeDetail()">← Back to Services</button>
       </div>
     </div>
   </div>

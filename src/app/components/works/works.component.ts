@@ -44,45 +44,46 @@ export class WorksComponent {
           title: 'Kartesa',
           client: 'Vihara LLC',
           description: 'ECommerce Application. Through this application the user can order the groceries. Checkout page is there. Payment gateway has been integrated. All the data have been fetched from the server. The items shown as image along with the details about each.',
-          googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.kartesa&hl=en',
-          iTunesUrl: 'https://itunes.apple.com/us/app/kartesa/id1061643840?mt=8'
+          googlePlayUrl: '',
+          iTunesUrl: ''
         },
         {
           title: 'Barber App',
           client: 'Agaze Technologies',
           description: 'Barber App gives all the salon locations in the google maps in the Dutch Place and you can also get all the details of the particular salon.',
-          googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.salon.barber.barber'
+          googlePlayUrl: ''
         },
         {
           title: 'Who’s Next?',
           client: 'Reshad',
           description: "The best app to help you make decisions is now available in the store! With the app 'Who's Next' you can avoid discussions or making choices in a fun and easy way. Whether you're alone, with friends, family or colleagues, with 'Who's Next' there's no discussion and choosing becomes easy! Can't decide who's doing the dishes tonight? Let the 'Who's Next' app decide for you! Download the app for free and enjoy.",
-          iTunesUrl: 'https://itunes.apple.com/us/app/whosnext/id1034939528?ls=1&mt=8',
-          googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.who.whosnext'
+          iTunesUrl: '',
+          googlePlayUrl: ''
         },
         {
           title: 'IBC Tamil',
           client: 'IBC Tamil',
           description: 'IBC Tamil Television broadcasts infotainment for worldwide viewers of all ages via satellite and streaming from our website and apps. Our content includes breaking news, live events and a huge range of entertainment, including game shows, dance and singing competitions.',
-          googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.tamil.ibctamil&hl=en'
+          googlePlayUrl: ''
         },
         {
           title: 'Kannada Times',
           client: 'Blluetek Group',
           description: 'Kannada Times is an Online and Print Media.',
-          googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.kannada.times'
+          googlePlayUrl: ''
         },
         {
           title: 'Sanjevani',
           client: 'Blluetek Group',
           description: 'The Largest Selling Kannada Daily\nThe First Kannada Paper to Adapt Digital Technology\nThe First Newspaper to Use the latest Communication Network\nThe First Kannada Newspaper to Reach Rural Readers',
-          googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.sunjev.sanjevani'
+          googlePlayUrl: ''
         },
         {
           title: 'JumpQs',
           client: 'Agaze Technologies',
           description: 'Reduce your wait times from hours to just a few minutes at fine dining restaurants in Bangalore. JumpQs allows you to see restaurant wait times in real time and seats you right from the App.',
-          iTunesUrl: 'https://itunes.apple.com/in/app/jumpqs/id930163943'
+          iTunesUrl: '',
+          googlePlayUrl: ''
         },
         {
           title: 'SpotLunch',
@@ -95,7 +96,7 @@ export class WorksComponent {
           title: 'AAJA',
           client: 'Kousik Rajendran',
           description: 'Aaja is the simple, private and reliable way to share and receive arrival times with friends and family.',
-          googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.aaja&hl=en'
+          googlePlayUrl: ''
         },
         {
           title: 'Adviteeya',
@@ -108,23 +109,35 @@ export class WorksComponent {
     {
       title: 'Websites',
       projects: [
-        {
-          title: '6th Generation Intelligence',
-          client: '101 Solutions',
+         {
+          title: 'Everything Education App',
+          client: 'Evertything Education',
           description: '',
-          websiteUrl: 'www.6gintel.com'
+          websiteUrl: 'https://everythingeducationapp.co.uk/login'
         },
         {
-          title: 'Sithagam',
-          client: '101 Solutions',
+          title: 'Everything Education website',
+          client: 'Evertything Education',
           description: '',
-          websiteUrl: 'www.sithagam.org'
+          websiteUrl: 'https://www.everythingeducation.co.uk/'
         },
         {
           title: 'Blluetek Group',
           client: 'Blluetek Group',
           description: '',
           websiteUrl: 'http://www.blluetekgroup.com'
+        },
+        {
+          title: '6th Generation Intelligence',
+          client: '101 Solutions',
+          description: '',
+          websiteUrl: ''
+        },
+        {
+          title: 'Sithagam',
+          client: '101 Solutions',
+          description: '',
+          websiteUrl: ''
         }
       ]
     }

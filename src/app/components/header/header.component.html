@@ -8,6 +8,20 @@
         <li *ngFor="let item of navItems" class="nav-item">
           <a (click)="scrollToSection(item.href)" [href]="item.href" class="nav-link">{{ item.label }}</a>
         </li>
+        <li class="nav-item dropdown" [class.open]="productMenuOpen"
+            (mouseenter)="productMenuOpen = true" (mouseleave)="productMenuOpen = false">
+          <button type="button" class="nav-link dropdown-toggle"
+                  aria-haspopup="true" [attr.aria-expanded]="productMenuOpen"
+                  (click)="productMenuOpen = !productMenuOpen">
+            Product <span class="caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li *ngFor="let product of products">
+              <a [href]="product.href" target="_blank" rel="noopener noreferrer"
+                 class="dropdown-link" (click)="productMenuOpen = false">{{ product.label }}</a>
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <button class="cta-button" (click)="openContactModal()">Get Started</button>

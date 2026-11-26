@@ -17,6 +17,12 @@ export class HeaderComponent {
     { label: 'Contact', href: '#contact' }
   ];
 
+  products = [
+    { label: 'PolicyValet', href: 'products/policyvalet.html' }
+  ];
+
+  productMenuOpen = false;
+
   constructor(private contactService: ContactService) {}
 
   scrollToSection(href: string) {

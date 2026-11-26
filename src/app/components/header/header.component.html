@@ -17,7 +17,7 @@
           <ul class="dropdown-menu">
             <li *ngFor="let product of products">
               <a [href]="product.href" target="_blank" rel="noopener noreferrer"
-                 class="dropdown-link" (click)="productMenuOpen = false">{{ product.label }}</a>
+                 class="dropdown-link" (click)="closeProductMenu()">{{ product.label }}</a>
             </li>
           </ul>
         </li>

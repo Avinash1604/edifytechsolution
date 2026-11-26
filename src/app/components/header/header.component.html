@@ -8,11 +8,10 @@
         <li *ngFor="let item of navItems" class="nav-item">
           <a (click)="scrollToSection(item.href)" [href]="item.href" class="nav-link">{{ item.label }}</a>
         </li>
-        <li class="nav-item dropdown" [class.open]="productMenuOpen"
-            (mouseenter)="productMenuOpen = true" (mouseleave)="productMenuOpen = false">
+        <li class="nav-item dropdown" [class.open]="productMenuOpen">
           <button type="button" class="nav-link dropdown-toggle"
                   aria-haspopup="true" [attr.aria-expanded]="productMenuOpen"
-                  (click)="productMenuOpen = !productMenuOpen">
+                  (click)="toggleProductMenu($event)">
             Product <span class="caret" aria-hidden="true">▾</span>
           </button>
           <ul class="dropdown-menu">

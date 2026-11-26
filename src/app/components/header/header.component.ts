@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactService } from '../../services/contact.service';
 
@@ -24,6 +24,16 @@ export class HeaderComponent {
   productMenuOpen = false;
 
   constructor(private contactService: ContactService) {}
+
+  toggleProductMenu(event: Event) {
+    event.stopPropagation();
+    this.productMenuOpen = !this.productMenuOpen;
+  }
+
+  @HostListener('document:click')
+  closeProductMenu() {
+    this.productMenuOpen = false;
+  }
 
   scrollToSection(href: string) {
     if (href === '#') {

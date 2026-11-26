@@ -125,7 +125,8 @@
         }
       }
 
-      &.open .dropdown-menu {
+      &.open .dropdown-menu,
+      &:hover .dropdown-menu {
         display: block;
         margin-top: 10px;
       }
